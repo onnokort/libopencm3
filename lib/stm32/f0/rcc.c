@@ -591,8 +591,8 @@ void rcc_clock_setup_in_hsi_out_48mhz(void)
 
 	RCC_CFGR &= ~RCC_CFGR_PLLSRC;
     
-    /* 8MHz * 12 / 2 = 24MHz         */
-	rcc_set_pll_multiplication_factor(RCC_CFGR_PLLMUL_MUL16);
+    /* 8MHz * 12 / 2 = 48MHz         */
+	rcc_set_pll_multiplication_factor(RCC_CFGR_PLLMUL_MUL12);
 
 	rcc_osc_on(PLL);
 	rcc_wait_for_osc_ready(PLL);
